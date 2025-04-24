@@ -1,0 +1,106 @@
+{% extends 'base.html' %} {% block title %} Chat com o FURIA Bot {% endblock %}
+{% block content %}
+<div
+  class="chat-container bg-zinc-800/60 p-4 sm:p-6 rounded-lg shadow-md w-full max-w-full sm:max-w-xl text-white"
+>
+  <div
+    class="message-container mb-4 p-3 sm:p-4 bg-zinc-700 rounded-lg min-h-[120px] max-h-[300px] overflow-y-auto"
+    id="message-container"
+  >
+    {% for message in messages %}
+    <p class="message user-message text-sm sm:text-base">
+      <strong>Você:</strong> {{ message.user_message }}
+    </p>
+    <p class="message bot-response text-sm sm:text-base">
+      <strong>FURIA Bot:</strong> {{ message.bot_response }}
+    </p>
+    {% empty %}
+    <p class="text-zinc-400 text-sm sm:text-base">
+      Envie uma mensagem para o FURIA Bot!
+    </p>
+    {% endfor %}
+  </div>
+
+  <div class="input-container">
+    <form id="chat-form" class="flex flex-col gap-2">
+      {% csrf_token %}
+      <input
+        type="text"
+        id="message-input"
+        name="message"
+        placeholder="Digite sua pergunta"
+        class="w-full p-2 border border-zinc-600 bg-zinc-900 rounded"
+        required
+      />
+      <button type="submit" class="send-button">Enviar</button>
+    </form>
+
+    <form method="post" class="mt-2">
+      {% csrf_token %}
+      <button
+        type="submit"
+        name="delete_history"
+        value="true"
+        class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded w-full"
+      >
+        Limpar conversa
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById("chat-form");
+  const messageInput = document.getElementById("message-input");
+  const messageContainer = document.getElementById("message-container");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const userMessage = messageInput.value.trim();
+    if (!userMessage) return;
+
+    // Mostra a mensagem do usuário
+    messageContainer.innerHTML += `
+      <p class="message user-message text-sm sm:text-base"><strong>Você:</strong> ${userMessage}</p>
+      <p class="message bot-response text-sm sm:text-base" id="typing"><strong>FURIA Bot:</strong> Digitando...</p>
+    `;
+    messageContainer.scrollTop = messageContainer.scrollHeight;
+
+    // Limpa o input
+    messageInput.value = "";
+
+    try {
+      const response = await fetch("{% url 'chat_ajax' %}", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": "{{ csrf_token }}",
+        },
+        body: JSON.stringify({ message: userMessage }),
+      });
+
+      const data = await response.json();
+
+      const typingEl = document.getElementById("typing");
+      if (typingEl) typingEl.remove();
+
+      if (data.bot_response) {
+        messageContainer.innerHTML += `
+          <p class="message bot-response text-sm sm:text-base"><strong>FURIA Bot:</strong> ${data.bot_response}</p>
+        `;
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+      } else {
+        messageContainer.innerHTML += `
+          <p class="message bot-response text-sm sm:text-base text-red-400"><strong>Erro:</strong> Resposta inválida</p>
+        `;
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+  // Rolar pro fim sempre
+  messageContainer.scrollTop = messageContainer.scrollHeight;
+</script>
+{% endblock %}
