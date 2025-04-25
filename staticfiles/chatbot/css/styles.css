@@ -1,0 +1,76 @@
+/* Fundo do body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e;
+  background-image: url('https://www.csgowallpapers.com/assets/images/original/mossawi_257383249913_20190223163632_191579967874.png'); 
+  background-size: cover;
+  background-position: 50% 10%;
+  background-attachment: fixed;
+}
+
+/* Caixa do chat */
+.chat-container {
+  background-color: rgba(0, 0, 0, 0.6); /* Transparência mais suave */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Input e botão com transparência */
+input[type="text"],
+textarea {
+  background-color: rgba(34, 34, 34, 0.6); /* cor escura translúcida */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Botões com fundo semi-transparente */
+button {
+  background-color: rgba(102, 51, 153, 0.8); /* lilás translúcido */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(102, 51, 153, 0.8),
+              0 0 10px rgba(102, 51, 153, 0.8),
+              0 0 20px rgba(102, 51, 153, 0.8);
+}
+
+button:hover {
+  background-color: rgba(138, 43, 226, 0.9); /* hover com brilho lilás */
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.9),
+              0 0 25px rgba(138, 43, 226, 0.9);
+}
+
+/* Área de mensagens também translúcida */
+#message-container {
+  background-color: rgba(50, 50, 50, 0.5); /* transparência para histórico */
+  padding: 12px;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Indicador do bot digitando */
+.typing-indicator {
+  color: #ff4b5c;
+  font-style: italic;
+}
+
+.bot-response.hidden {
+  visibility: hidden;
+}
+
+.bot-response.show {
+  visibility: visible;
+}
