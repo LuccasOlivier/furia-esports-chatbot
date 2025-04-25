@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+﻿from django.http import JsonResponse
 from django.shortcuts import render
 from .forms import MessageForm
 from .models import Message
@@ -95,12 +95,17 @@ def furia_chatbot(request):
 
             Message.objects.create(user_message=user_message, bot_response=bot_response)
 
-            messages = Message.objects.all()
+            # Verificar se há mensagens no banco de dados e passá-las para o template
+            messages = Message.objects.all().order_by('-timestamp')  # Exibir mensagens mais recentes primeiro
             return render(request, "chatbot/chat.html", {'messages': messages})
 
         return render(request, "chatbot/chat.html", {'form': form, 'error': 'Mensagem inválida'})
 
-    messages = Message.objects.all()
+    # Ao carregar a página, verificar se há mensagens
+    messages = Message.objects.all().order_by('-timestamp')  # Exibir mensagens mais recentes primeiro
+    if not messages:  # Se não houver mensagens, passa uma lista vazia
+        messages = []
+
     return render(request, "chatbot/chat.html", {'messages': messages})
 
 # View AJAX
