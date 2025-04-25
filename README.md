@@ -36,7 +36,51 @@ Além dos requisitos obrigatórios, algumas melhorias e implementações adicion
 
 ## Como Rodar o Projeto
 
-Para rodar o projeto localmente, siga os passos abaixo:
+Você não precisa instalar nada localmente para testar o chatbot! A aplicação está disponível online e pode ser acessada diretamente pelo link:
 
-1. Clone o repositório:
+👉 [Acesse o chatbot aqui](https://furia-esports-chatbot.onrender.com/)
+
+### Sugestões de Testes
+
+Aqui estão algumas ideias de interações para você experimentar com o chatbot:
+
+- **Saudações e boas-vindas**
+  - "Oi"
+  - "eae"
+  - "Olá"
+  - "fala!"
+
+- **Perguntas sobre o time de CS da FURIA**
+  - "Qual posição no ranking furia se encontra?"
+  - "Hoje tem jogo do furia?"
+  - "Quando é o próximo jogo da FURIA?"
+  - "Quem é o líder do time?"
+  - "Qual seu jogador preferido?"
+
+- **Interações divertidas**
+  - "Conta uma curiosidade sobre a FURIA"
+  - "Qual seu time favorito?"
+    
+- **Despedidas**
+  - "tchau"
+  - "falou"
+  - "até logo"
+  - "adeus"
+ 
+- **Funcionalidades**
+  - Você pode limpar a conversa clicando no botão **"Limpar conversa"**
+  - Veja a resposta sendo exibida com efeito de digitação, trazendo uma experiência mais interativa.
+
+## Considerações Finais
+
+Este projeto foi desenvolvido como parte de um desafio técnico com o objetivo de demonstrar habilidades em desenvolvimento web, lógica de programação e criatividade na construção de experiências interativas para usuários.
+
+O FURIA Chatbot oferece uma experiência simples e divertida para os fãs da equipe, simulando uma conversa com um bot temático e personalizado. Embora não utilize inteligência artificial avançada, o sistema entrega respostas coerentes e contextuais, baseando-se em padrões pré-definidos.
+
+A ideia é mostrar como é possível criar um chatbot funcional com tecnologias acessíveis e foco no usuário final. Este projeto foi desenvolvido exclusivamente para fins de processo seletivo e não está aberto para contribuições externas.
+
+---
+
+ **Feito por Lucas Oliveira**  
+ **Desafio FURIA - 2024**
 
