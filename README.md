@@ -65,6 +65,7 @@ O FURIA Chatbot oferece uma experiência simples e divertida para os fãs da equ
 A ideia é mostrar como é possível criar um chatbot funcional com tecnologias acessíveis e foco no usuário final. Este projeto foi desenvolvido exclusivamente para fins de processo seletivo e não está aberto para contribuições externas.
 
 ---
+https://github.com/user-attachments/assets/05d1fd7b-3019-45ad-959d-0314ecdd75a0
 
  **Feito por Lucas Oliveira**  
  **Desafio FURIA - 2024**
