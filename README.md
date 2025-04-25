@@ -36,7 +36,36 @@ Além dos requisitos obrigatórios, algumas melhorias e implementações adicion
 
 ## Como Rodar o Projeto
 
-Para rodar o projeto localmente, siga os passos abaixo:
+Você não precisa instalar nada localmente para testar o chatbot! A aplicação está disponível online e pode ser acessada diretamente pelo link:
 
-1. Clone o repositório:
+👉 [Acesse o chatbot aqui](https://furia-esports-chatbot.onrender.com/)
+
+## Sugestões de Interação
+
+O chatbot está pronto para interagir de diversas formas! Não há limites para a criatividade, então experimente conversar com ele como se estivesse trocando ideia com um amigo fã de CS. Você pode tentar:
+
+- Cumprimentos e saudações
+- Perguntar sobre o time, os jogadores ou os jogos da FURIA
+- Pedir curiosidades sobre o time ou sobre o mundo do CS
+- Fazer uma pergunta sobre o desempenho recente da FURIA
+- Despedidas ou simplesmente trocar ideias
+
+Aproveite a experiência interativa, com respostas exibidas de maneira divertida e envolvente!
+ 
+- **Funcionalidades**
+  - Você pode limpar a conversa clicando no botão **"Limpar conversa"**
+  - Veja a resposta sendo exibida com efeito de digitação, trazendo uma experiência mais interativa.
+
+## Considerações Finais
+
+Este projeto foi desenvolvido como parte de um desafio técnico com o objetivo de demonstrar habilidades em desenvolvimento web, lógica de programação e criatividade na construção de experiências interativas para usuários.
+
+O FURIA Chatbot oferece uma experiência simples e divertida para os fãs da equipe, simulando uma conversa com um bot temático e personalizado. Embora não utilize inteligência artificial avançada, o sistema entrega respostas coerentes e contextuais, baseando-se em padrões pré-definidos.
+
+A ideia é mostrar como é possível criar um chatbot funcional com tecnologias acessíveis e foco no usuário final. Este projeto foi desenvolvido exclusivamente para fins de processo seletivo e não está aberto para contribuições externas.
+
+---
+
+ **Feito por Lucas Oliveira**  
+ **Desafio FURIA - 2024**
 
