@@ -40,32 +40,17 @@ Você não precisa instalar nada localmente para testar o chatbot! A aplicação
 
 👉 [Acesse o chatbot aqui](https://furia-esports-chatbot.onrender.com/)
 
-### Sugestões de Testes
+## Sugestões de Interação
 
-Aqui estão algumas ideias de interações para você experimentar com o chatbot:
+O chatbot está pronto para interagir de diversas formas! Não há limites para a criatividade, então experimente conversar com ele como se estivesse trocando ideia com um amigo fã de CS. Você pode tentar:
 
-- **Saudações e boas-vindas**
-  - "Oi"
-  - "eae"
-  - "Olá"
-  - "fala!"
+- Cumprimentos e saudações
+- Perguntar sobre o time, os jogadores ou os jogos da FURIA
+- Pedir curiosidades sobre o time ou sobre o mundo do CS
+- Fazer uma pergunta sobre o desempenho recente da FURIA
+- Despedidas ou simplesmente trocar ideias
 
-- **Perguntas sobre o time de CS da FURIA**
-  - "Qual posição no ranking furia se encontra?"
-  - "Hoje tem jogo do furia?"
-  - "Quando é o próximo jogo da FURIA?"
-  - "Quem é o líder do time?"
-  - "Qual seu jogador preferido?"
-
-- **Interações divertidas**
-  - "Conta uma curiosidade sobre a FURIA"
-  - "Qual seu time favorito?"
-    
-- **Despedidas**
-  - "tchau"
-  - "falou"
-  - "até logo"
-  - "adeus"
+Aproveite a experiência interativa, com respostas exibidas de maneira divertida e envolvente!
  
 - **Funcionalidades**
   - Você pode limpar a conversa clicando no botão **"Limpar conversa"**
