@@ -77,6 +77,33 @@ respostas_personalizadas = {
         "Global? Então você é o arT disfarçado, né? 😏",
         "O importante é jogar com os amigos e dar risada! 😂"
     ],
+    
+    # Respostas afirmativas simples
+    r"\b(sim|já sim|já|ja|testei|testado|já testei|claro|óbvio|com certeza|isso|isso aí|boa|positiva|afirmativo|uhum|aham|foi|suave|tranquila|insana)\b": [
+        "Boa! E o que achou? 😄",
+        "Top! Curtiu a experiência? 🕹️",
+        "Aí sim! Quer falar mais sobre o CS2 ou saber algo da FURIA? 🐆",
+        "Show! Se quiser comentar mais ou perguntar outra coisa, tô por aqui. 🤙",
+        "Massa! Agora manda a próxima, quero ver se acerto. 😎"
+    ],
+    
+    # Elogios e empolgação simples
+    r"\b(demais|massa|top|animal|sensacional|incrível|muito bom|bom demais|daora|da hora|excelente|show|show de bola|irado|brabo|braba|maneiro)\b": [
+        "Sabia que ia curtir! 😎🔥",
+        "Aí sim! FURIA sempre no hype! 🐆",
+        "Top demais! Se quiser trocar mais ideia ou perguntar algo, manda aí! 💬",
+        "Isso é o espírito! Quer saber algo sobre o time ou os jogadores? 🎯",
+        "É assim que se fala! Tamo junto! 🤜🤛"
+    ],
+    
+    # Demonstração de interesse em saber mais
+    r"\b(quero( saber| sim| muito)?|tenho interesse|gostaria( de saber)?|curioso|curiosa)\b": [
+        "Boa! Pode perguntar o que quiser sobre a FURIA ou o CS. Tô aqui pra isso! 💬🔥",
+        "Manda ver! Quer saber sobre o time, os jogadores, os campeonatos? 🎯",
+        "Massa! É só perguntar que eu te conto tudo sobre a FURIA! 🐆",
+        "Tô preparado pra responder! O que você quer saber? 😄",
+        "É disso que eu gosto! Bora trocar ideia. Quer começar por onde? 🎮"
+    ],
 
     # ENTRADA E SAÍDA
     r"\b(oi|olá|e?ae|fala|salve|tamo junto)": [
@@ -164,9 +191,25 @@ respostas_personalizadas.update({
         "KKKK boa essa! Tem mais dessas? 😂",
         "Rindo alto aqui, manda mais memes de CS! 🤣"
     ],
+    
+    # Desculpas
+    r"\b(desculpa|foi mal|perdão|me desculpa)\b": [
+        "Relaxa, tá tudo certo! 😎",
+        "Tranquilo, acontece! 🤝",
+        "Sem crise! Bora continuar falando da FURIA. 🐆"
+    ],
+    
+    # Confirmação / Respostas genéricas
+    r"\b(ok|tá|ta|ta bom|beleza|blz|okay|entendi|tendi|hmm|hum|sei|certo|suave|de boa|show|pode crer|sussa|demorou)\b": [
+        "Fechou! 🔥 Se quiser saber mais, só mandar! 😉",
+        "Boa! Qualquer coisa, só perguntar. 🧐",
+        "Show! Tô por aqui pra falar mais sobre a FURIA. 🐆",
+        "Massa! Se quiser trocar mais ideia, tô na área. 🤙",
+        "Isso aí! Bora pra próxima dúvida! 🚀"
+    ],
 
     # HUMANOIDES & COMPORTAMENTO
-    r"\b(você é real|você é humano|você é bot|você é IA|tá me ouvindo|fala comigo)\b": [
+    r"\b(você é real|você é humano|você é bot|você é IA|tá me ouvindo|fala comigo|o que você é?)\b": [
         "Sou um bot com alma de fã da FURIA! 🤖🖤",
         "Não sou humano, mas tenho coração torcedor! 💛",
         "Fica tranquilo, tô aqui só pra trocar ideia com você e falar de CS! 💬"
@@ -201,10 +244,19 @@ respostas_personalizadas.update({
 
 respostas_personalizadas.update({
     # Saudações e início de conversa
-    r"\b(oi|olá|e?ae|fala|salve|bora|tamo junto)\b": [
+    r"\b(oi|olá|e?ae|fala|salve|bora|tamo junto|eai|eaí|e aí|ola|opa|e ai)\b": [
         "Salve! Bora falar de FURIA e CS? 😄",
         "E aí! Tá preparado pra falar da FURIA? 🔥",
         "Falaaa! Como vai a vida de fã da FURIA? 🖤"
+    ],
+    
+    # Cumprimentos por horário
+    r"\b(bom dia|boa tarde|boa noite|boas tardes|boas noites|bom diaa+|boa noitee+|boa tardee+)\b": [
+        "Boaaa, fera! Que seu dia seja tão top quanto um clutch do KSCERATO! ☀️🔥",
+        "Boaaa! Bora aproveitar e falar da FURIA? 🐆💥",
+        "Boaaa! Já viu os jogos da FURIA hoje? Se não viu, tá perdendo! 🌙🎮",
+        "Boaaa, lenda! Que tal uma resenha sobre CS e FURIA? 😎🖤",
+        "Boaaa, guerreiro! A noite é nossa, igual um ace do yuurih! 🌌💪"
     ],
 
     # Confirmações simples (precisa estar ANTES do fallback!)
@@ -237,7 +289,7 @@ respostas_personalizadas.update({
         "Demais, né? FURIA é só emoção! 🧡",
         "É isso aí! Vem com a gente torcer juntos! 🙌"
     ],
-    
+       
     # Agradecimentos
     r"\b(obrigado|valeu|agradecido|agradeço|obrigada)\b": [
     "Tamo junto! Qualquer coisa, só mandar! 🔥",
